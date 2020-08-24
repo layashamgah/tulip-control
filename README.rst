@@ -3,7 +3,7 @@ Installation
 
 pip install -r requirement.txt
 
-pip install tulip==1.3
+pip install .
 
 * use python 2.7 as interpreter
 
