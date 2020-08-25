@@ -1,0 +1,4 @@
+# networkx==2.4
+# tulip==1.4.0
+matplotlib
+pyaml

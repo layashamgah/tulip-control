@@ -1,0 +1,29 @@
+3x3:
+  grid_size : [3, 3]
+  out_file : 'results/3x3_strategy.pkl'
+
+  env_vars: ['d0', 'd1', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8']
+  env_init: ['d6']
+  env_safe: ['d0 -> X (d1 || d3)',
+    'd1 -> X (d0 || d4)',
+    'd3 -> X (d0 || d4 || d6)',
+    'd4 -> X (d3 || d1 || d5 || d7)',
+    'd5 -> X (d4 || d8)',
+    'd6 -> X (d3 || d7)',
+    'd7 -> X (d4 || d6 || d8)',
+    'd8 -> X (d7 || d5)',
+  ]
+  env_prog: ['True']
+  sys_vars: ['a0', 'a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8']
+  sys_init: ['a0']
+  sys_safe: ['a0 -> X (a1 || a3)',
+    'a1 -> X (a0 || a4 || a2)',
+    'a2 -> X (a2)',
+    'a3 -> X (a0 || a4 || a6)',
+    'a4 -> X (a1 || a3 || a5 || a7)',
+    'a5 -> X (a4 || a2 || a8)',
+    'a6 -> X (a3 || a7)',
+    'a7 -> X (a4 || a6 || a8)',
+    'a8 -> X (a7 || a5)',
+  ]
+  sys_prog: ['a2']
