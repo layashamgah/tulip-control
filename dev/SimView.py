@@ -1,13 +1,10 @@
 import matplotlib.pyplot as plt
-import networkx as nx
 import yaml
 import re
-
-import logging
 from math import floor
 import numpy as np
 from matplotlib.patches import Rectangle
-logging.basicConfig(level=logging.ERROR)
+
 
 
 
