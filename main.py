@@ -29,4 +29,4 @@ if __name__ == '__main__':
     GRID_SIZE = '3x3'
     out_file = os.path.join(current_dir, 'dev', config[GRID_SIZE]['out_file'])
     synthesis()
-    simulate_strategy()
+    # simulate_strategy()

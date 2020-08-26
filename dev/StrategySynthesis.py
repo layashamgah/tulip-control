@@ -77,6 +77,8 @@ def show_random_plan(G, x):
 def save_graph(G, name):
     print(name)
     nx.write_gpickle(G, "{}".format(name))
+    yml_name = name.replace(".pkl", ".yaml")
+    nx.write_yaml(G, yml_name)
 
 
 if __name__ == '__main__':
