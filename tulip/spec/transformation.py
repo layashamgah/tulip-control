@@ -38,7 +38,7 @@ import warnings
 import networkx as nx
 from tulip.spec.ast import nodes
 from tulip.spec import parser
-
+from functools import lru_cache
 
 logger = logging.getLogger(__name__)
 
@@ -82,6 +82,7 @@ class Tree(nx.MultiDiGraph):
         tree._recurse(u)
         return tree
 
+    @lru_cache(maxsize=1000)
     def _recurse(self, u):
         if hasattr(u, 'value'):
             # necessary this terminal is the root
@@ -94,6 +95,7 @@ class Tree(nx.MultiDiGraph):
             raise Exception('unknown node type: {u}'.format(u=u))
         return u
 
+    @lru_cache(maxsize=1000)
     def to_recursive_ast(self, u=None):
         if u is None:
             u = self.root

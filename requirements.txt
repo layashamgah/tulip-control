@@ -5,6 +5,8 @@ ply==3.10
 networkx==2.4
 scipy
 
+pyaml
+matplotlib
 # easy extras
 omega==0.3.1
 gr1py==0.2.0
