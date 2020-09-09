@@ -21,3 +21,20 @@ Simply replace your ``dd-0.5.5-py3.6.egg`` with mine one. In my case, ``dd-0.5.5
 
 That's it! You are now ready to synthesize your strategy. 
 Hope this helps!
+
+## Update
+This fix makes the code run for two days and plus 
+and it was killed because of the memory problem again. 
+We can try ```version_bdd``` but is it worthy?
+Here is the log of the execution on the server:
+```
+`polytope` failed to import `cvxopt.glpk`.
+will use `scipy.optimize.linprog`
+`omega.symbolic.symbolic` failed to import `dd.cudd`.
+Will use `dd.autoref`.
+Killed
+
+real    3027m44.795s
+user    2722m39.085s
+sys     2m6.688s
+```
